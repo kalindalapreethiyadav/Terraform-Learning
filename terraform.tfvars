@@ -1,2 +1,2 @@
-state = Karantaka
-country = india
+state = "Karantaka"
+country = "india"
