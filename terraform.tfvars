@@ -1,0 +1,2 @@
+state = Karantaka
+country = india
