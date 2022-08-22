@@ -18,7 +18,7 @@ output "var_name_output" {
 #----------------
 
 variable "var_name" {
-    default = ["devops" 100, true] #one key having mutiple values
+    default = ["devops", 100, true] #one key having mutiple values
 }
 
 output "displaying_output" {
