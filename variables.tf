@@ -13,3 +13,14 @@ output "third_var" {
 output "var_name_output" {
     value = var.var_name
 }
+
+
+#----------------
+
+variable "var_name" {
+    default = ["devops" 100, true] #one key having mutiple values
+}
+
+output "displaying_output" {
+    value = "priting ${var.var_name[0]} and value and status is ${var.var_name[1]} ${var.var_name[2]}"
+}
