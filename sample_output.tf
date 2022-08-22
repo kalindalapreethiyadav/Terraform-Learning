@@ -1,3 +1,3 @@
 output "sample_output"  {
-    variable = "helllo....Good!"
+    variable = "hello world"
 }
