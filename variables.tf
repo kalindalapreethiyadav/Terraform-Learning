@@ -21,6 +21,6 @@ variable "var_name1" {
     default = ["devops", 100, true] #one key having mutiple values
 }
 
-output "displaying_output" {
+output "display_output_var1" {
     value = "priting ${var.var_name1[0]} and value and status is ${var.var_name1[1]} ${var.var_name1[2]}"
 }
