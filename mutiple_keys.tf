@@ -1,5 +1,4 @@
 
-
 variable "var_name2" {
     default = {
         course = "Devops",
@@ -10,5 +9,5 @@ variable "var_name2" {
 }
 
 output "displaying_output" {
-    value = "printing ${var.var_name2[0]} and other details are ${var.var_name2[1]} ${var.var_name2[2]} ${var.var_name2[3]}"
+    value = "printing ${var.var_name2.course} and other details are ${var.var_name2.duration} ${var.var_name2.status} ${var.var_name2.topic}"
 }
