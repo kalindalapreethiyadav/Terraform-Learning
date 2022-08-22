@@ -10,5 +10,5 @@ variable "var_name2" {
 }
 
 output "displaying_output" {
-    value = "priting ${var.var_name2[0]} and other details are : ${var.var_name2[1]} ${var.var_name2[2]} ${var.var_name2[3]}"
+    value = "printing ${var.var_name2[0]} and other details are ${var.var_name2[1]} ${var.var_name2[2]} ${var.var_name2[3]}"
 }
