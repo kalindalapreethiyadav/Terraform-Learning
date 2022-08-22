@@ -1,3 +1,9 @@
+
+Terraform init:-
+--------------
+Init -->.tf ----check codes & syntax and download all the required pulgin for .tf
+plan :--> apply the pan (changes of Infrastructure as per terform fiel code
+
 #Terraform Varaibles has three data types
 # 1) String 2) Number 3) Boolean
 
