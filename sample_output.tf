@@ -15,3 +15,10 @@ variable "country" {}
 output "detail_country" {
     value = "Name of the country : ${var.country}"
 }
+
+#CLI Command's having higher precedence compared to ".tfvars" files
+
+#CLI cmd > .tfvars > .tf > shell variable
+
+# git pull;  terraform init; terraform play ; terraform apply -auto-approve -var state="adhra_pradeshhh"
+ 
