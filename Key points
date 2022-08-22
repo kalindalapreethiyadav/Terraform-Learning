@@ -5,3 +5,9 @@
 #where as the  Number & boolean ---not required 
 
 #Terraform doesn't support SINGLE Quotes
+
+There are 3 types pf Varaible Type
+
+1)Default Variable Type
+2)List Variable Type
+3)Map Variable Type
