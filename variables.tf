@@ -17,7 +17,7 @@ output "var_name_output" {
 
 #----------------
 
-variable "var_name" {
+variable "var_name1" {
     default = ["devops", 100, true] #one key having mutiple values
 }
 
