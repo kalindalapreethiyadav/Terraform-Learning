@@ -6,12 +6,12 @@ output "sample_output"  {
 
 variable "state" {} # Need to declare empty vartable before it calling
 
-output detail_state {
+output "detail_state" {
     value = "Name of the state : ${var.state}"
 }
 
 variable "country" {}
 
-output detail_country {
+output "detail_country" {
     value = "Name of the country : ${var.country}"
 }
