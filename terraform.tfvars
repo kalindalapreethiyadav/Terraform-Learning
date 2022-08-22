@@ -1,2 +1,1 @@
 state = "Karantaka"
-country = "india"

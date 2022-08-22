@@ -48,3 +48,15 @@ variable "var_name2" {
 output "displaying_output" {
     value = "priting ${var.var_name2[0]} and other details are : ${var.var_name2[1]} ${var.var_name2[2] ${var.var_name2[3]}}"
 }
+
+#CLI Command's having higher precedence compared to ".tfvars" files
+
+#CLI cmd > .tfvars > .tf > shell variable
+
+# git pull;  terraform init; terraform play ; terraform apply -auto-approve -var state="adhra_pradeshhh"
+ 
+"Terraform.tfvars" ---> Terform will automatically detects the varaible file
+
+"Sample.tfvars"  -----> If external varible file need to be specified explicity through the CMDS
+
+example : 
