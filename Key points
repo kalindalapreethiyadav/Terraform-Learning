@@ -67,3 +67,5 @@ $ terraform init; terraform plan ; terraform apply -auto-approve -var-file=sampl
 
 var, var-file > *.auto.fvars > .tfvars > shell cmd
 
+SYstem that we want that we describe --is called "ARGUMENTS"
+system properties that we get once the system is up---is called  "ATTRIBUTES"
