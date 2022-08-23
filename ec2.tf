@@ -4,7 +4,9 @@ resource "aws_instance" "Hello_preethi-ec2" {
 
   tags = {
     Name    = "my-first-ec2"
-    ENV     = "dev"
-    Project = "cc"
   }
+}
+
+output "privateip" {
+  value = aws_instance.Hello_preethi-ec2.privateip
 }
