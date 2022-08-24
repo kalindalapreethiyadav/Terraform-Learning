@@ -4,8 +4,8 @@ resource "aws_instance" "preethi-ec2" {
 
   tags = {
     Name = "my-first-ec2"
-    ENv = "dev"
-    project = "cc"
+    ENV = "dev"
+    project = "robot"
   }
 }
 
