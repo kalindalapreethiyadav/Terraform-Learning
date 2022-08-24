@@ -8,5 +8,5 @@ resource "aws_instance" "preethi-ec2" {
 }
 
 output "privateip" {
-  value = aws_instance.preethi-ec2.privateip
+  value = aws_instance.preethi-ec2.private_ip
 }
