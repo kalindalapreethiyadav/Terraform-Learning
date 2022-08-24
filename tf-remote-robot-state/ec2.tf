@@ -1,18 +1,4 @@
-resource "aws_instance" "preethi-ec2" {
-  ami                     = "ami-0aa718de62aea6fbe"
-  instance_type           = "t3.micro"
-  vpc_security_group_ids  =  [aws_security_group.allow_ssh.id]
 
-  tags = {
-    Name = "my-first-ec2"
-    ENV = "dev"
-    project = "robot"
-  }
-}
-
-output "privateip" {
-  value = aws_instance.preethi-ec2.private_ip
-}
 
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
@@ -37,4 +23,23 @@ resource "aws_security_group" "allow_ssh" {
   tags = {
     Name = "allow_ssh"
   }
+}
+
+
+
+
+resource "aws_instance" "preethi-ec2" {
+  ami                     = "ami-0aa718de62aea6fbe"
+  instance_type           = "t3.micro"
+  vpc_security_group_ids  =  [aws_security_group.allow_ssh.id]
+
+  tags = {
+    Name = "my-first-ec2"
+    ENV = "dev"
+    project = "robot"
+  }
+}
+
+output "privateip" {
+  value = aws_instance.preethi-ec2.private_ip
 }
