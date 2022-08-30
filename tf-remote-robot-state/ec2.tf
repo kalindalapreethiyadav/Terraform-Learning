@@ -1,7 +1,7 @@
 
 
 resource "aws_instance" "preethi-ec2" {
-  ami                     = "ami-0aa718de62aea6fbe"
+  ami                     = "ami-DevOps-LabImage-CentOS7"
   instance_type           = "t3.micro"
 
   tags = {
