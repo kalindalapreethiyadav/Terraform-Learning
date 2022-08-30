@@ -5,9 +5,10 @@ resource "aws_security_group" "allow_ssh" {
   description = "Allow ssh inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
+    description      = "ssh from VPC"
     from_port        = 22
     to_port          = 22
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   egress {
