@@ -4,12 +4,14 @@
 
 module "ec2" {
   source = "./ec2"
+  sg = moduele.sg.sg_id
 }
 
 module "sg" {
     source = "./sg"
+
 }
 
-output "ipaddress_value" {
-    value = aws_instance.preethi1-ec2.public_ip
+output "public-ip" {
+    value = module.ec2.public_ip
 }

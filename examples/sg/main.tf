@@ -22,3 +22,7 @@ resource "aws_security_group" "allow_ssh_preethi" {
     Name = "allow_ssh_preethi"
   }
 }
+
+output "sg_id" {
+   value = aws_security_group.allow_ssh_preethi.id
+}
