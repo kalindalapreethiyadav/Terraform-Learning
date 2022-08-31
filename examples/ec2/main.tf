@@ -6,6 +6,6 @@ resource "aws_instance" "preethi1-ec2" {
 
 variable "sg" {}
 
-output "public-ip" {
+output "pub-ip" {
     value = aws_instance.preethi1-ec2.public_ip
 }

@@ -4,7 +4,7 @@
 
 module "ec2" {
   source = "./ec2"
-  sg = moduele.sg.sg_id
+  sg = module.sg.sg_id
 }
 
 module "sg" {
@@ -12,6 +12,6 @@ module "sg" {
 
 }
 
-output "public-ip" {
+output "pub-ip" {
     value = module.ec2.public_ip
 }
