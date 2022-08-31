@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-        bucket  = "robot-bucket-preethi"
+        bucket  = "robot-bucket-preethi_new"
         key     = "modukes_example/terraform.tfstate"
         region    = "us-east-1"
 
