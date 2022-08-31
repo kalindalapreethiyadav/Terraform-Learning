@@ -4,14 +4,14 @@
 
 module "ec2" {
   source = "./ec2"
-  sg = module.sg.sg_id
+  sg = module.sg.sg_id   
 }
 
 module "sg" {
-    source = "./sg"
+    source = "./sg" #declaring the module in root module
 
 }
 
-output "pub-ip" {
-    value = module.ec2.public_ip
+output "public-ip calling" {
+    value = module.ec2.pub_ip  #calling output of in ec2 module varibale pub-ip
 }
