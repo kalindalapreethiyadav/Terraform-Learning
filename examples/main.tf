@@ -12,6 +12,9 @@ module "sg" {
 
 }
 
-output "public-ip" {
-    value = module.ec2.pub_ip  #calling output of in ec2 module varibale pub-ip
+ #calling output of in ec2 module varibale pub-ip
+
+
+output "pub-ip" {
+  value = module.ec2.pub-ip
 }
