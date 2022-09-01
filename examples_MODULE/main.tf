@@ -10,12 +10,6 @@ module "ec2" {
 module "sg" {
     source = "./sg" #declaring the module in root module
 
- provisioner "local-exec" {
-    command = <<EOF
-    
-    EOF
-  }
-
   provisioner "remote-exec" {
 
     connection {
@@ -24,7 +18,6 @@ module "sg" {
     password = "DevOps321"
     host     = self.public_ip
   }
-
     inline = [
     "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e ansible_user=centos -e ansible_password=DevOps321 -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml"
     ]
