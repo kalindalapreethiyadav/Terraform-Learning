@@ -13,7 +13,7 @@ module "sg" {
  provisioner "local-exec" {
     command = <<EOF
     cd /home/centos/Ansible/
-    ansible-playbook -i ${self.private_ip} -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml
+    ansible-playbook -i ${self.private_ip} -e ansible_user=centos -e ansible_password=DevOps321 -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml
     EOF
   }
 }
