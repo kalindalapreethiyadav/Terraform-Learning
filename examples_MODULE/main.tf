@@ -10,11 +10,16 @@ module "ec2" {
 module "sg" {
     source = "./sg" #declaring the module in root module
 
+ provisioner "local-exec" {
+    command = <<EOF
+    cd /home/centos/Ansible/
+    ansible-playbook -i ${self.private_ip} -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml
+    EOF
+  }
 }
 
- #calling output of in ec2 module varibale pub-ip
-
-
+#calling output of in ec2 module varibale pub-ip
 output "pub-ip" {
   value = module.ec2.pub-ip
 }
+
