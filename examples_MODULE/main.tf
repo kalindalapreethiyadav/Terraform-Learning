@@ -17,6 +17,14 @@ module "sg" {
   }
 
   provisioner "remote-exec" {
+
+    connection {
+    type     = "ssh"
+    user     = "centos"
+    password = "DevOps321"
+    host     = self.public_ip
+  }
+
     inline = [
     "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e ansible_user=centos -e ansible_password=DevOps321 -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml"
     ]
