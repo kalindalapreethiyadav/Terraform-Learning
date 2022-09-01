@@ -9,19 +9,6 @@ module "ec2" {
 
 module "sg" {
     source = "./sg" #declaring the module in root module
-
-  provisioner "remote-exec" {
-
-    connection {
-    type     = "ssh"
-    user     = "centos"
-    password = "DevOps321"
-    host     = self.public_ip
-  }
-    inline = [
-    "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.2 roboshop-push.yml"
-    ]
-  }
 }
 
 #calling output of in ec2 module varibale pub-ip
