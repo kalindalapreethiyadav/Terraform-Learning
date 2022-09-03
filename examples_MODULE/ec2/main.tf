@@ -12,8 +12,7 @@ resource "aws_instance" "preethi1-ec2" {
     host     = self.public_ip
   }
     inline = [
-      #cd /home/centos/Ansible/
-      "ansible-playbook tags_sample.yml"
+    "ansible-pull -i ${self.public_ip} -e ENV=dev -e COMPONENT=frontend -e TAG_NAME=0.0.2 -e ansible_user=centos -e ansible_password=DevOps321 roboshop-push.yml"
     ]
   }
 }
