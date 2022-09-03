@@ -12,7 +12,7 @@ resource "aws_instance" "preethi1-ec2" {
     host     = self.public_ip
   }
     inline = [
-      cd /home/centos/Ansible/
+      #cd /home/centos/Ansible/
       "ansible-playbook tags_sample.yml"
     ]
   }
