@@ -1,4 +1,4 @@
-  lines (26 sloc) 916 Bytes
+
 resource "aws_spot_instance_request" "cheap_worker" {
   ami                    = data.aws_ami.base-ami.image_id
   instance_type          = "t3.micro"
