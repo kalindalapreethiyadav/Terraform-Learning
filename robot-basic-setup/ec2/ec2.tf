@@ -20,7 +20,7 @@ resource "null_resource" "null" {
         type     = "ssh"
         user     = "centos"
         password = "DevOps321"
-        # host     = self.public_ip
+        host     = self.public_ip
        # host     = aws_spot_instance_request.cheap_worker.private_ip 
       } 
     inline = [
