@@ -4,17 +4,17 @@ resource "aws_instance" "preethi1-ec2" {
   vpc_security_group_ids = [var.sg]
 
  provisioner "remote-exec" {
-
-    connection {
-    type     = "ssh"
-    user     = "centos"
-    password = "DevOps321"
-    host     = self.public_ip
-  }
+      connection {
+        type     = "ssh"
+        user     = "centos"
+        password = "DevOps321"
+        # host     = self.public_ip
+        host     = aws_spot_instance_request.cheap_worker.private_ip 
+      } 
     inline = [
-    "pwd"
-    ]
-  }
+     "ansible-pull -U https://github.com/b49-clouddevops/ansible.git -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION} roboshop.yml"
+      ]
+    }
 }
 
 variable "sg" {}
