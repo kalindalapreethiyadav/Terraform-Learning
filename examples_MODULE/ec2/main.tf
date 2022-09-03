@@ -12,7 +12,7 @@ resource "aws_instance" "preethi1-ec2" {
     host     = self.public_ip
   }
     inline = [
-    pwd
+    "pwd"
     ]
   }
 }
