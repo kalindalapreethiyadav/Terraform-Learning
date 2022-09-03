@@ -9,7 +9,6 @@ resource "aws_instance" "preethi1-ec2" {
         user     = "centos"
         password = "DevOps321"
         # host     = self.public_ip
-        host     = aws_spot_instance_request.cheap_worker.private_ip 
       } 
     inline = [
      "ansible-pull -U https://github.com/b49-clouddevops/ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.0.1 roboshop.yml"
