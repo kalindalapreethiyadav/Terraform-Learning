@@ -12,7 +12,7 @@ resource "aws_instance" "preethi1-ec2" {
     host     = self.public_ip
   }
     inline = [
-    "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e ansible_user=centos -e ansible_password=DevOps321 roboshop-push.yml"
+    pwd
     ]
   }
 }
