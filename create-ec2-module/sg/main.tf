@@ -1,5 +1,5 @@
-resource "aws_security_group" "allow_ssh_preethi" {
-  name        = "allow_sec_group"
+resource "aws_security_group" "allow_ssh_preek" {
+  name        = "allow_ssh_group"
   description = "Allow ssh inbound traffic"
 
   ingress {
@@ -27,10 +27,10 @@ ingress {
   }
 
   tags = {
-    Name = "allow_ssh_sec_group"
+    Name = "allow_ssh_group"
   }
 }
 
 output "sg_id" {
-   value = aws_security_group.allow_ssh_preethi.id
+   value = aws_security_group.allow_ssh_preek.id
 }
