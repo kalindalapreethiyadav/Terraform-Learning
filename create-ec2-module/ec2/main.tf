@@ -3,7 +3,6 @@ resource "aws_instance" "preethi_vm-ec2" {
   instance_type           = "t3.micro"
   vpc_security_group_ids = [var.sg]
 
-variable "sg" {}
  provisioner "remote-exec" {
       connection {
         type     = "ssh"
@@ -18,7 +17,7 @@ variable "sg" {}
     }
 }
 
-
+variable "sg" {}
 
 output "pub-ip" {
     value = aws_instance.preethi1_vm-ec2.public_ip
