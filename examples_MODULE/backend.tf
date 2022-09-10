@@ -1,7 +1,7 @@
 terraform {
     backend "s3" {
         bucket  = "robot-bucket-preethi"
-        key     = "modukes_example/terraform.tfstate"
+        key     = "modules_example/terraform.tfstate"
         region    = "us-east-1"
 
     }
