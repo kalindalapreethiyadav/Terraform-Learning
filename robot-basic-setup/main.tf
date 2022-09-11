@@ -1,13 +1,6 @@
-module "ec2" {
-    source = "./ec2"
-    sg = module.sg.sg_id
+module "frontend" {
+    for_each     = var.ALL_COMPONENTS
+    source       = "./ec2"
+    COMPONENT    = each.key
+    APP_VERSION  = each.value.app_version
 }
-
-module "sg" {
-    source = "./sg"
-}
-
-output "public_ip_address" {
-    value = module.ec2.pub-ip
-}
-  

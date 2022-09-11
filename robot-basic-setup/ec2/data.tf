@@ -3,3 +3,4 @@ data "aws_ami" "base-ami" {
   name_regex       = "base-with-ansible"
   owners           = ["self"]
 }
+
