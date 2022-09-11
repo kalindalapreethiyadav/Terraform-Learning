@@ -14,7 +14,7 @@ resource "aws_instance" "preethi_vm_ec2" {
       ]
     }
 }
- 
+}
 variable "sg" {}
 
 output "pub-ip" {
