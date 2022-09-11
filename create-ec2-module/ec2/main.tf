@@ -7,5 +7,5 @@ resource "aws_instance" "preethi_vm_ec2" {
 variable "sg" {}
 
 output "pub-ip" {
-    value = aws_instance.preethi_vm-ec2.public_ip
+    value = aws_instance.preethi_vm_ec2.public_ip
 }
