@@ -11,7 +11,7 @@ resource "aws_instance" "preethi_vm_ec2" {
         host     = self.public_ip
       } 
     inline = [
-     "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.1.1 roboshop.yml"
+     "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.11.1 roboshop.yml"
       ]
     }
 }
