@@ -1,6 +1,6 @@
-data "aws_ami" "DevOps-LabImage-CentOS7" {
+data "aws_ami" "centos7-ami-with-ansible" {
   most_recent      = true
-  name_regex       = "DevOps-LabImage-CentOS7"
-  owners           = ["355449129696"]
+  name_regex       = "centos7-ami-with-ansible"
+  owners           = ["self"]
 }
 
