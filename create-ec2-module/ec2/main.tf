@@ -13,7 +13,7 @@ resource "aws_instance" "preethi_vm_ec2" {
       }
 
     inline = [
-        "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e roboshop.yml"
+        "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git roboshop.yml -e COMPONENT=frontend -e ENV=dev"
       ]
     }
 }
