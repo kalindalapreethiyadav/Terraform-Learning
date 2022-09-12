@@ -11,7 +11,7 @@ resource "aws_instance" "preethi_vm_ec2" {
         password = "DevOps321"
         host     = self.public_ip
       }
-      
+
     inline = [
         "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.1.1 roboshop.yml"
       ]
@@ -19,9 +19,6 @@ resource "aws_instance" "preethi_vm_ec2" {
 }
 
 
-
-
-}
 variable "sg" {}
 
 output "pub-ip" {
