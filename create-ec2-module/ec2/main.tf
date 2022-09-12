@@ -1,5 +1,5 @@
 resource "aws_instance" "preethi_vm_ec2" {
-  ami                     = data.aws_ami.centos7-ami-with-ansible.image_id
+  ami                     = data.aws_ami.ami-with-ansible.image_id
   instance_type           = "t3.micro"
   vpc_security_group_ids  = [var.sg]
 
