@@ -1,5 +1,5 @@
 resource "aws_instance" "preethi_vm_ec2" {
-  ami                     = "ami-00ff427d936335825"
+  ami                     = "ami-052d9bac7baef4290"
   instance_type           = "t3.micro"
   vpc_security_group_ids  = [var.sg]
 
