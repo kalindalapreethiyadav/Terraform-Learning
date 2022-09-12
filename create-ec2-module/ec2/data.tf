@@ -1,7 +1,6 @@
 data "aws_ami" "LabImage" {
   most_recent = true
-    Name   = "app-server"
-    Tested = "true"
+    name   = "app-server"
     name_regex       = "DevOps-LabImage-CentOS7"
 }
 
