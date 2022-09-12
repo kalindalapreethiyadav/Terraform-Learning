@@ -1,5 +1,5 @@
 resource "aws_instance" "preethi_vm_ec2" {
-  ami                     = data.aws_ami.DevOps-LabImage-CentOS7.image_id
+  ami                     = data.aws_ami.centos7-ami-with-ansible.image_id
   instance_type           = "t3.micro"
   vpc_security_group_ids  = [var.sg]
 
@@ -13,8 +13,7 @@ resource "aws_instance" "preethi_vm_ec2" {
       }
 
     inline = [
-        "curl https://gitlab.com/thecloudcareers/opensource/-/raw/master/ansible/install.sh | sudo bash",
-        "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e TAG_NAME=0.1.1 roboshop.yml"
+        "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git -e COMPONENT=frontend -e ENV=dev -e roboshop.yml"
       ]
     }
 }
