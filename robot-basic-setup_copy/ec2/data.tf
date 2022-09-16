@@ -1,6 +1,6 @@
-data "aws_ami" "base-ami" {
+data "aws_ami" "ami-with-ansible" {
   most_recent      = true
-  name_regex       = "base-with-ansible"
+  name_regex       = "ami-with-ansible"
   owners           = ["self"]
 }
 
