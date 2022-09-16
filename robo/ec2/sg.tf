@@ -1,5 +1,5 @@
-resource "aws_security_group" "allow_all_preek" {
-  name        = "allow_all_${var.COMPONENT}"
+resource "aws_security_group" "allow_all" {
+  name        = "allow_${var.COMPONENT}"
   description = "Allow all inbound traffic"
 
 ingress {
@@ -19,6 +19,6 @@ ingress {
   }
 
   tags = {
-    Name = "allow_all_${var.COMPONENT}"
+    Name = "allow_${var.COMPONENT}"
   }
 }
