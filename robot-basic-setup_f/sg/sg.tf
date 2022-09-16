@@ -1,10 +1,9 @@
-# Creating security group
-resource "aws_security_group" "allow_all" {
-  name        = "allow_${var.COMPONENT}"
-  description = "Allow all inbound traffic"
+resource "aws_security_group" "allow_all_preek" {
+  name        = "allow_all_${var.COMPONENT}"
+  description = "Allow ssh inbound traffic"
 
   ingress {
-    description      = "SSH to VPC"
+    description      = "ssh from VPC"
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
@@ -20,6 +19,10 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_${var.COMPONENT}"
+    Name = "allow_all_${var.COMPONENT}"
   }
+}
+
+output "sg_id" {
+   value = aws_security_group.allow_all_preek.id
 }
