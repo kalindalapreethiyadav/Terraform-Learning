@@ -7,7 +7,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   tags = {
     Name = var.COMPONENT
   }
-
+}
  provisioner "remote-exec" {
 
       connection {
@@ -22,7 +22,6 @@ resource "aws_spot_instance_request" "cheap_worker" {
       ]
     }
 
-}
 
 output "pub-ip" {
     value = aws_instance.preethi_vm_ec2.public_ip
