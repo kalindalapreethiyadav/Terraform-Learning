@@ -2,8 +2,8 @@ resource "aws_security_group" "allow_all_preek" {
   name        = "allow_all_${var.COMPONENT}"
   description = "Allow ssh inbound traffic"
 
-  ingress {
-    description      = "ssh from VPC"
+ingress {
+    description      = "SSH to VPC"
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
