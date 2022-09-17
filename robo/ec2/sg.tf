@@ -1,8 +1,9 @@
-resource "aws_security_group" "allow_all" {
+resource "aws_security_group" "allow_all_sg" {
   name        = "allow_${var.COMPONENT}"
   description = "Allow all inbound traffic"
 
-ingress {
+
+  ingress {
     description      = "SSH to VPC"
     from_port        = 0
     to_port          = 0
