@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "robotshop-files"
-    key    = "robotshop-files_folder/terraform.tfstate"
+    bucket = "b49-rf-remote-state-bucket"
+    key    = "robot-basic-setup/terraform.tfstate"
     region = "us-east-1"
   }
 }
