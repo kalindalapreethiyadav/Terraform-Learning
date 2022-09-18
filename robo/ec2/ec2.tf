@@ -7,7 +7,6 @@ resource "aws_spot_instance_request" "frontend" {
   tags = {
     Name = var.COMPONENT
   }
-}
 
  provisioner "remote-exec" {
 
@@ -22,3 +21,4 @@ resource "aws_spot_instance_request" "frontend" {
         "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION}"
       ]
     }
+}
