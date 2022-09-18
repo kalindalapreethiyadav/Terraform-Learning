@@ -24,7 +24,7 @@ resource "null_resource" "null" { #null_resoource that is empty resource creater
         user     = "centos"
         password = "DevOps321"
        # host     = self.public_ip
-       host = aws_spot_instance_request.cheap.worker.private_ip
+       host = aws_spot_instance_request.cheap-worker.private_ip
       }
 
     inline = [
