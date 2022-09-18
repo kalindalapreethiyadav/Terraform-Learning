@@ -1,4 +1,4 @@
-resource "aws_spot_instance_request" "frontend" {
+resource "aws_spot_instance_request" "cheap-worker" {
   ami                      = data.aws_ami.ami-with-ansible.image_id
   instance_type            = "t3.micro"
   wait_for_fulfillment     = true
