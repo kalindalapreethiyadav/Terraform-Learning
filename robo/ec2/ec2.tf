@@ -8,17 +8,28 @@ resource "aws_spot_instance_request" "cheap-worker" {
     Name = var.COMPONENT
   }
 
+# provisoner will run only onces i.e first time, And if any tasks in provisoner code at remot server
+#fails than TERRAFORM consider as "resource" also failure even if it is successful
+
+#so we are creating a duplicate provisoner 
+
+resource "null_resource" "null" { #null_resoource that is empty resource creater
+  trigger {
+    a= timestamp() #everytime time chnages and triigers all the time
+  } 
  provisioner "remote-exec" {
 
       connection {
         type     = "ssh"
         user     = "centos"
         password = "DevOps321"
-        host     = self.public_ip
+       # host     = self.public_ip
+       host = aws_spot_instance_request.cheap.worker.private_ip
       }
 
     inline = [
         "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION}"
       ]
     }
+}
 }
