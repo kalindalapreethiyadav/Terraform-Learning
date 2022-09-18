@@ -1,11 +1,9 @@
-module "frontend" {
-    source       = "./ec2"
-    COMPONENT    = "frontend"
-    APP_VERSION  = "0.0.9"
-}
 
-module "cart" {
+module "component" {
+    for_each = [var.ALL_COMPONENTS]
     source       = "./ec2"
-    COMPONENT    = "cart"
-    APP_VERSION  = "0.0.9"
-}
+    COMPONENT = each.key
+    APP_VERSION  = each.value.app_version
+  }
+
+
