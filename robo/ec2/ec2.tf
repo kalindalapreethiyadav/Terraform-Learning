@@ -7,7 +7,7 @@ resource "aws_spot_instance_request" "cheap-worker" {
   tags = {
     Name = var.COMPONENT
   }
-
+}
 # provisoner will run only onces i.e first time, And if any tasks in provisoner code at remot server
 #fails than TERRAFORM consider as "resource" also failure even if it is successful
 
@@ -31,5 +31,4 @@ resource "null_resource" "null" { #null_resoource that is empty resource creater
         "ansible-pull -U https://github.com/kalindalapreethiyadav/Ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=dev -e TAG_NAME=${var.APP_VERSION}"
       ]
     }
-}
 }
