@@ -14,7 +14,7 @@ resource "aws_spot_instance_request" "cheap-worker" {
 #so we are creating a duplicate provisoner 
 
 resource "null_resource" "null" { #null_resoource that is empty resource creater
-  trigger {
+  triggers =  {
     a= timestamp() #everytime time chnages and triigers all the time
   } 
  provisioner "remote-exec" {
