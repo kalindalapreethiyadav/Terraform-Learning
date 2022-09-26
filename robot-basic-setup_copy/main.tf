@@ -1,5 +1,5 @@
 module "frontend" {
+    for_each     = var.ALL_COMPONENTS
     source       = "./ec2"
-    COMPONENT    = "frontend"
-    APP_VERSION  = "0.0.9"
-}
+    COMPONENT    = each.key
+    APP_VERSION  = each.value.app_version
