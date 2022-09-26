@@ -2,7 +2,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   ami                    = data.aws_ami.AMI-Ansible-with-base.image_id
   instance_type          = "t3.micro"
   wait_for_fulfillment   = true 
-  vpc_security_group_ids = [aws_security_group.allow_all.id]
+  vpc_security_group_ids = [aws_security_group.allow_all_preek.id]
 
   tags = {
     Name = var.COMPONENT
